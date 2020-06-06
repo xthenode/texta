@@ -55,10 +55,8 @@ private:
 
 protected:
     typedef xos::language::texta::processor::implement t_processor_t;
-    typedef io::sequencet<char_t> sequence_t;
-    typedef io::seekert<sequence_t> seeker_t;
-    typedef io::readert<seeker_t> reader_t;
-    typedef io::writert<sequence_t> writer_t;
+    typedef t_processor_t::input_t reader_t;
+    typedef t_processor_t::output_t writer_t;
     typedef derives main_t;
 
     /// class reader
