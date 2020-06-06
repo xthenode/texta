@@ -13,56 +13,94 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: libxde.pro
+#   File: Makefile
 #
 # Author: $author$
-#   Date: 5/6/2020
+#   Date: 5/9/2020
 #
-# QtCreator .pro file for texta library libxde
+# generic Gcc Makefile for texta Executable t
 ########################################################################
-include(../../../../../build/QtCreator/texta.pri)
-include(../../../../QtCreator/texta.pri)
-include(../../texta.pri)
-include(../../../../QtCreator/lib/libxde/libxde.pri)
 
-TARGET = $${libxde_TARGET}
-TEMPLATE = $${libxde_TEMPLATE}
-CONFIG += $${libxde_CONFIG}
+
+#
+# target
+#
+t_EXETARGET = t
 
 ########################################################################
-# INCLUDEPATH
-#
-INCLUDEPATH += \
-$${libxde_INCLUDEPATH} \
 
-# DEFINES
-# 
-DEFINES += \
-$${libxde_DEFINES} \
+#
+# user c++ flags
+#
+t_USRCXXFLAGS += \
+${texta_USRCXXFLAGS} \
+
+#
+# user defines
+#
+t_USRDEFINES += \
+${texta_USRDEFINES} \
+
+#
+# user includes
+#
+t_USRINCLUDES += \
+${texta_USRINCLUDES} \
+
+#
+# user libdirs
+#
+t_USRLIBDIRS += \
+${texta_USRLIBDIRS} \
 
 ########################################################################
-# OBJECTIVE_HEADERS
-#
-OBJECTIVE_HEADERS += \
-$${libxde_OBJECTIVE_HEADERS} \
 
-# OBJECTIVE_SOURCES
 #
-OBJECTIVE_SOURCES += \
-$${libxde_OBJECTIVE_SOURCES} \
+# Executable .c sources
+#
+#t_EXE_C_SOURCES += \
+#${TEXTA_SRC}/texta/base/Base.c \
+
+#
+# Executable .cc sources
+#
+#t_EXE_CC_SOURCES += \
+#${TEXTA_SRC}/texta/base/Base.cc \
+
+#
+# Executable .cxx sources
+#
+t_EXE_CXX_SOURCES += \
+${XDE_SRC}/clib/ct/ctmain.cxx \
+${XDE_SRC}/clib/cos/argmain.cxx \
+${xde_t_function_CXX_SOURCES} \
+
+#
+# Executable .cpp sources
+#
+t_EXE_CPP_SOURCES += \
+${TEXTA_SRC}/xos/language/texta/processor/xde/cDebug.cpp \
+
+#
+# Executable .m sources
+#
+#t_EXE_M_SOURCES += \
+#${TEXTA_SRC}/texta/base/Base.m \
+
+#
+# Executable .mm sources
+#
+#t_EXE_MM_SOURCES += \
+#${TEXTA_SRC}/texta/base/Base.mm \
+
 
 ########################################################################
-# HEADERS
-#
-HEADERS += \
-$${libxde_HEADERS} \
-$${OBJECTIVE_HEADERS} \
 
-# SOURCES
 #
-SOURCES += \
-$${libxde_SOURCES} \
+# Executable libraries
+#
+t_LIBS += \
+${texta_LIBS}
 
-########################################################################
 
 

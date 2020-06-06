@@ -68,6 +68,8 @@ $${XDE_SRC}/clib/cxttp \
 $${XDE_SRC}/clib/cyy \
 $${XDE_SRC}/clib/cxsl \
 $${XDE_SRC}/clib/ct \
+$${XDE_SRC}/clib/ccrypto \
+$${XDE_SRC}/clib/ct/ctcrypto \
 \
 $${XDE_SRC}/clib/csocket \
 $${XDE_SRC}/clib/cfs \
@@ -96,12 +98,19 @@ $${XDE_SRC}/clib/ct/ctfilefunctions.cxx \
 $${XDE_SRC}/clib/ct/ctdatefunctions.cxx \
 $${XDE_SRC}/clib/ct/ctconditionalfunctions.cxx \
 $${XDE_SRC}/clib/ct/ctstringfunctions.cxx \
+$${XDE_SRC}/clib/ct/ctcrypto/ctuuidfunction.cxx \
 
 # xde LIBS
 #
 xde_LIBS += \
 -L$${XDE_LIB}/lib$${XDE_NAME} \
 -l$${XDE_NAME} \
+
+# texta xde LIBS
+#
+texta_xde_LIBS += \
+-L$${XDE_LIB}/libtexta_$${XDE_NAME} \
+-ltexta_$${XDE_NAME} \
 
 ########################################################################
 # nadir
@@ -277,19 +286,22 @@ texta_DEFINES += RELEASE_BUILD
 # texta INCLUDEPATH
 #
 texta_INCLUDEPATH += \
+$${TEXTA_SRC}/xde \
 $${TEXTA_SRC} \
 $${stara_INCLUDEPATH} \
-$${cifra_INCLUDEPATH} \
 $${rete_INCLUDEPATH} \
+$${cifra_INCLUDEPATH} \
 $${nadir_INCLUDEPATH} \
+$${xde_INCLUDEPATH} \
 $${build_texta_INCLUDEPATH} \
 
 # texta DEFINES
 #
 texta_DEFINES += \
+$${xde_DEFINES} \
 $${nadir_DEFINES} \
-$${rete_DEFINES} \
 $${cifra_DEFINES} \
+$${rete_DEFINES} \
 $${stara_DEFINES} \
 $${build_texta_DEFINES} \
 

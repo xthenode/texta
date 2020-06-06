@@ -91,6 +91,6 @@ $${texta_FRAMEWORKS} \
 # texta_exe LIBS
 #
 texta_exe_LIBS += \
-$${texta_xde_LIBS} \
+$${texta_LIBS} \
 
 

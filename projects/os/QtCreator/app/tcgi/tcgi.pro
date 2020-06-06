@@ -13,56 +13,64 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: libxde.pro
+#   File: tcgi.pro
 #
 # Author: $author$
 #   Date: 5/6/2020
 #
-# QtCreator .pro file for texta library libxde
+# QtCreator .pro file for texta executable tcgi
 ########################################################################
 include(../../../../../build/QtCreator/texta.pri)
 include(../../../../QtCreator/texta.pri)
 include(../../texta.pri)
-include(../../../../QtCreator/lib/libxde/libxde.pri)
+include(../../../../QtCreator/app/tcgi/tcgi.pri)
 
-TARGET = $${libxde_TARGET}
-TEMPLATE = $${libxde_TEMPLATE}
-CONFIG += $${libxde_CONFIG}
+TARGET = $${tcgi_TARGET}
 
 ########################################################################
 # INCLUDEPATH
 #
 INCLUDEPATH += \
-$${libxde_INCLUDEPATH} \
+$${tcgi_INCLUDEPATH} \
 
 # DEFINES
 # 
 DEFINES += \
-$${libxde_DEFINES} \
+$${tcgi_DEFINES} \
 
 ########################################################################
 # OBJECTIVE_HEADERS
 #
 OBJECTIVE_HEADERS += \
-$${libxde_OBJECTIVE_HEADERS} \
+$${tcgi_OBJECTIVE_HEADERS} \
 
 # OBJECTIVE_SOURCES
 #
 OBJECTIVE_SOURCES += \
-$${libxde_OBJECTIVE_SOURCES} \
+$${tcgi_OBJECTIVE_SOURCES} \
 
 ########################################################################
 # HEADERS
 #
 HEADERS += \
-$${libxde_HEADERS} \
+$${tcgi_HEADERS} \
 $${OBJECTIVE_HEADERS} \
 
 # SOURCES
 #
 SOURCES += \
-$${libxde_SOURCES} \
+$${tcgi_SOURCES} \
 
 ########################################################################
+# FRAMEWORKS
+#
+FRAMEWORKS += \
+$${tcgi_FRAMEWORKS} \
+
+# LIBS
+#
+LIBS += \
+$${tcgi_LIBS} \
+$${FRAMEWORKS} \
 
 

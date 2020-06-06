@@ -13,12 +13,12 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: texta.pri
+#   File: txde.pri
 #
 # Author: $author$
-#   Date: 4/14/2020
+#   Date: 5/6/2020
 #
-# os QtCreator .pri file for texta
+# Os specific QtCreator .pri file for texta
 ########################################################################
 
 UNAME = $$system(uname)
@@ -75,28 +75,6 @@ nadir_LIBS += \
 -l$${NADIR_NAME} \
 
 ########################################################################
-# rete
-RETE_THIRDPARTY_PKG_MAKE_BLD = $${RETE_THIRDPARTY_PKG}/build/$${BUILD_OS}/$${BUILD_CONFIG}
-RETE_THIRDPARTY_PRJ_MAKE_BLD = $${OTHER_BLD}/$${RETE_THIRDPARTY_PRJ}/build/$${BUILD_OS}/$${BUILD_CONFIG}
-RETE_THIRDPARTY_PKG_BLD = $${RETE_THIRDPARTY_PKG}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
-RETE_THIRDPARTY_PRJ_BLD = $${OTHER_BLD}/$${RETE_THIRDPARTY_PRJ}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
-RETE_PKG_BLD = $${OTHER_BLD}/$${RETE_PKG}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
-RETE_PRJ_BLD = $${OTHER_BLD}/$${RETE_PRJ}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
-#RETE_LIB = $${RETE_THIRDPARTY_PKG_MAKE_BLD}/lib
-#RETE_LIB = $${RETE_THIRDPARTY_PRJ_MAKE_BLD}/lib
-#RETE_LIB = $${RETE_THIRDPARTY_PKG_BLD}/lib
-#RETE_LIB = $${RETE_THIRDPARTY_PRJ_BLD}/lib
-RETE_LIB = $${RETE_PKG_BLD}/lib
-#RETE_LIB = $${RETE_PRJ_BLD}/lib
-#RETE_LIB = $${TEXTA_LIB}
-
-# rete LIBS
-#
-rete_LIBS += \
--L$${RETE_LIB}/lib$${RETE_NAME} \
--l$${RETE_NAME} \
-
-########################################################################
 # cifra
 CIFRA_THIRDPARTY_PKG_MAKE_BLD = $${CIFRA_THIRDPARTY_PKG}/build/$${BUILD_OS}/$${BUILD_CONFIG}
 CIFRA_THIRDPARTY_PRJ_MAKE_BLD = $${OTHER_BLD}/$${CIFRA_THIRDPARTY_PRJ}/build/$${BUILD_OS}/$${BUILD_CONFIG}
@@ -119,26 +97,50 @@ cifra_LIBS += \
 -l$${CIFRA_NAME} \
 
 ########################################################################
-# stara
-STARA_THIRDPARTY_PKG_MAKE_BLD = $${STARA_THIRDPARTY_PKG}/build/$${BUILD_OS}/$${BUILD_CONFIG}
-STARA_THIRDPARTY_PRJ_MAKE_BLD = $${OTHER_BLD}/$${STARA_THIRDPARTY_PRJ}/build/$${BUILD_OS}/$${BUILD_CONFIG}
-STARA_THIRDPARTY_PKG_BLD = $${STARA_THIRDPARTY_PKG}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
-STARA_THIRDPARTY_PRJ_BLD = $${OTHER_BLD}/$${STARA_THIRDPARTY_PRJ}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
-STARA_PKG_BLD = $${OTHER_BLD}/$${STARA_PKG}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
-STARA_PRJ_BLD = $${OTHER_BLD}/$${STARA_PRJ}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
-#STARA_LIB = $${STARA_THIRDPARTY_PKG_MAKE_BLD}/lib
-#STARA_LIB = $${STARA_THIRDPARTY_PRJ_MAKE_BLD}/lib
-#STARA_LIB = $${STARA_THIRDPARTY_PKG_BLD}/lib
-#STARA_LIB = $${STARA_THIRDPARTY_PRJ_BLD}/lib
-STARA_LIB = $${STARA_PKG_BLD}/lib
-#STARA_LIB = $${STARA_PRJ_BLD}/lib
-#STARA_LIB = $${TEXTA_LIB}
+# rete
+RETE_THIRDPARTY_PKG_MAKE_BLD = $${RETE_THIRDPARTY_PKG}/build/$${BUILD_OS}/$${BUILD_CONFIG}
+RETE_THIRDPARTY_PRJ_MAKE_BLD = $${OTHER_BLD}/$${RETE_THIRDPARTY_PRJ}/build/$${BUILD_OS}/$${BUILD_CONFIG}
+RETE_THIRDPARTY_PKG_BLD = $${RETE_THIRDPARTY_PKG}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
+RETE_THIRDPARTY_PRJ_BLD = $${OTHER_BLD}/$${RETE_THIRDPARTY_PRJ}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
+RETE_PKG_BLD = $${OTHER_BLD}/$${RETE_PKG}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
+RETE_PRJ_BLD = $${OTHER_BLD}/$${RETE_PRJ}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
+#RETE_LIB = $${RETE_THIRDPARTY_PKG_MAKE_BLD}/lib
+#RETE_LIB = $${RETE_THIRDPARTY_PRJ_MAKE_BLD}/lib
+#RETE_LIB = $${RETE_THIRDPARTY_PKG_BLD}/lib
+#RETE_LIB = $${RETE_THIRDPARTY_PRJ_BLD}/lib
+RETE_LIB = $${RETE_PKG_BLD}/lib
+#RETE_LIB = $${RETE_PRJ_BLD}/lib
+#RETE_LIB = $${TEXTA_LIB}
 
-# stara LIBS
+# rete LIBS
 #
-stara_LIBS += \
--L$${STARA_LIB}/lib$${STARA_NAME} \
--l$${STARA_NAME} \
+rete_LIBS += \
+-L$${RETE_LIB}/lib$${RETE_NAME} \
+-l$${RETE_NAME} \
+
+########################################################################
+# xde
+XDE_THIRDPARTY_PKG_MAKE_BLD = $${XDE_THIRDPARTY_PKG}/build/$${BUILD_OS}/$${BUILD_CONFIG}
+XDE_THIRDPARTY_PRJ_MAKE_BLD = $${OTHER_BLD}/$${XDE_THIRDPARTY_PRJ}/build/$${BUILD_OS}/$${BUILD_CONFIG}
+XDE_THIRDPARTY_PKG_BLD = $${XDE_THIRDPARTY_PKG}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
+XDE_THIRDPARTY_PRJ_BLD = $${OTHER_BLD}/$${XDE_THIRDPARTY_PRJ}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
+XDE_PKG_BLD = $${OTHER_BLD}/$${XDE_PKG}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
+XDE_PRJ_BLD = $${OTHER_BLD}/$${XDE_PRJ}/build/$${BUILD_OS}/QtCreator/$${BUILD_CONFIG}
+#XDE_LIB = $${XDE_THIRDPARTY_PKG_MAKE_BLD}/lib
+#XDE_LIB = $${XDE_THIRDPARTY_PRJ_MAKE_BLD}/lib
+#XDE_LIB = $${XDE_THIRDPARTY_PKG_BLD}/lib
+#XDE_LIB = $${XDE_THIRDPARTY_PRJ_BLD}/lib
+#XDE_LIB = $${XDE_PKG_BLD}/lib
+#XDE_LIB = $${XDE_PRJ_BLD}/lib
+#XDE_LIB = $${TEXTA_LIB}
+XDE_BLD = ../..
+XDE_LIB = $${XDE_BLD}/lib
+
+# xde LIBS
+#
+xde_LIBS += \
+-L$${XDE_LIB}/lib$${XDE_NAME} \
+-l$${XDE_NAME} \
 
 ########################################################################
 # texta
@@ -154,46 +156,23 @@ texta_DEFINES += \
 # texta LIBS
 #
 texta_LIBS += \
-$${stara_LIBS} \
-$${rete_LIBS} \
-$${cifra_LIBS} \
-$${nadir_LIBS} \
 $${xde_LIBS} \
-$${build_texta_LIBS} \
-
-contains(TEXTA_OS,macosx|linux) {
-texta_LIBS += \
--lpthread \
--ldl
-} else {
-} # contains(TEXTA_OS,macosx|linux)
-
-contains(TEXTA_OS,linux) {
-texta_LIBS += \
--lrt
-} else {
-} # contains(TEXTA_OS,linux)
-
-########################################################################
-# texta xde LIBS
-#
-texta_xde_LIBS += \
-$${stara_LIBS} \
-$${cifra_LIBS} \
 $${rete_LIBS} \
+$${cifra_LIBS} \
 $${nadir_LIBS} \
 $${build_texta_LIBS} \
-$${texta_xde_LIBS} \
 
 contains(TEXTA_OS,macosx|linux) {
-texta_xde_LIBS += \
+texta_LIBS += \
 -lpthread \
 -ldl
 } else {
 } # contains(TEXTA_OS,macosx|linux)
 
 contains(TEXTA_OS,linux) {
-texta_xde_LIBS += \
+texta_LIBS += \
 -lrt
 } else {
 } # contains(TEXTA_OS,linux)
+
+

@@ -13,56 +13,67 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: libxde.pro
+#   File: tcgi.pri
 #
 # Author: $author$
 #   Date: 5/6/2020
 #
-# QtCreator .pro file for texta library libxde
+# QtCreator .pri file for texta executable tcgi
 ########################################################################
-include(../../../../../build/QtCreator/texta.pri)
-include(../../../../QtCreator/texta.pri)
-include(../../texta.pri)
-include(../../../../QtCreator/lib/libxde/libxde.pri)
-
-TARGET = $${libxde_TARGET}
-TEMPLATE = $${libxde_TEMPLATE}
-CONFIG += $${libxde_CONFIG}
 
 ########################################################################
-# INCLUDEPATH
-#
-INCLUDEPATH += \
-$${libxde_INCLUDEPATH} \
+# tcgi
 
-# DEFINES
-# 
-DEFINES += \
-$${libxde_DEFINES} \
+# tcgi TARGET
+#
+tcgi_TARGET = tcgi
+
+# tcgi INCLUDEPATH
+#
+tcgi_INCLUDEPATH += \
+$${texta_INCLUDEPATH} \
+
+# tcgi DEFINES
+#
+tcgi_DEFINES += \
+$${texta_DEFINES} \
 
 ########################################################################
-# OBJECTIVE_HEADERS
+# tcgi OBJECTIVE_HEADERS
 #
-OBJECTIVE_HEADERS += \
-$${libxde_OBJECTIVE_HEADERS} \
+#tcgi_OBJECTIVE_HEADERS += \
+#$${TEXTA_SRC}/texta/base/Base.hh \
 
-# OBJECTIVE_SOURCES
+# tcgi OBJECTIVE_SOURCES
 #
-OBJECTIVE_SOURCES += \
-$${libxde_OBJECTIVE_SOURCES} \
-
-########################################################################
-# HEADERS
-#
-HEADERS += \
-$${libxde_HEADERS} \
-$${OBJECTIVE_HEADERS} \
-
-# SOURCES
-#
-SOURCES += \
-$${libxde_SOURCES} \
+#tcgi_OBJECTIVE_SOURCES += \
+#$${TEXTA_SRC}/texta/base/Base.mm \
 
 ########################################################################
+# tcgi HEADERS
+#
+tcgi_HEADERS += \
+$${TEXTA_SRC}/xos/language/texta/processor/xde/cDebug.hpp \
+$${XDE_SRC}/clib/ccgi/cgi.hxx \
+$${XDE_SRC}/clib/ct/ctcgi.hxx \
+
+# tcgi SOURCES
+#
+tcgi_SOURCES += \
+$${TEXTA_SRC}/xos/language/texta/processor/xde/cDebug.cpp \
+$${XDE_SRC}/clib/ccgi/cgi.cxx \
+$${XDE_SRC}/clib/ct/ctcgi.cxx \
+$${xde_t_function_SOURCES} \
+
+########################################################################
+# tcgi FRAMEWORKS
+#
+tcgi_FRAMEWORKS += \
+$${texta_FRAMEWORKS} \
+
+# tcgi LIBS
+#
+tcgi_LIBS += \
+$${texta_LIBS} \
 
 

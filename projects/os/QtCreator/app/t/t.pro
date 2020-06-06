@@ -13,56 +13,64 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: libxde.pro
+#   File: t.pro
 #
 # Author: $author$
 #   Date: 5/6/2020
 #
-# QtCreator .pro file for texta library libxde
+# QtCreator .pro file for texta executable t
 ########################################################################
 include(../../../../../build/QtCreator/texta.pri)
 include(../../../../QtCreator/texta.pri)
 include(../../texta.pri)
-include(../../../../QtCreator/lib/libxde/libxde.pri)
+include(../../../../QtCreator/app/t/t.pri)
 
-TARGET = $${libxde_TARGET}
-TEMPLATE = $${libxde_TEMPLATE}
-CONFIG += $${libxde_CONFIG}
+TARGET = $${t_TARGET}
 
 ########################################################################
 # INCLUDEPATH
 #
 INCLUDEPATH += \
-$${libxde_INCLUDEPATH} \
+$${t_INCLUDEPATH} \
 
 # DEFINES
 # 
 DEFINES += \
-$${libxde_DEFINES} \
+$${t_DEFINES} \
 
 ########################################################################
 # OBJECTIVE_HEADERS
 #
 OBJECTIVE_HEADERS += \
-$${libxde_OBJECTIVE_HEADERS} \
+$${t_OBJECTIVE_HEADERS} \
 
 # OBJECTIVE_SOURCES
 #
 OBJECTIVE_SOURCES += \
-$${libxde_OBJECTIVE_SOURCES} \
+$${t_OBJECTIVE_SOURCES} \
 
 ########################################################################
 # HEADERS
 #
 HEADERS += \
-$${libxde_HEADERS} \
+$${t_HEADERS} \
 $${OBJECTIVE_HEADERS} \
 
 # SOURCES
 #
 SOURCES += \
-$${libxde_SOURCES} \
+$${t_SOURCES} \
 
 ########################################################################
+# FRAMEWORKS
+#
+FRAMEWORKS += \
+$${t_FRAMEWORKS} \
+
+# LIBS
+#
+LIBS += \
+$${t_LIBS} \
+$${FRAMEWORKS} \
 
 

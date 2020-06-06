@@ -16,7 +16,7 @@
 #   File: libxde.pri
 #
 # Author: $author$
-#   Date: 4/15/2020
+#   Date: 5/6/2020
 #
 # QtCreator .pri file for texta library libxde
 ########################################################################
@@ -33,12 +33,12 @@ libxde_CONFIG += staticlib
 # libxde INCLUDEPATH
 #
 libxde_INCLUDEPATH += \
-$${texta_xde_INCLUDEPATH} \
+$${texta_INCLUDEPATH} \
 
 # libxde DEFINES
 #
 libxde_DEFINES += \
-$${texta_xde_DEFINES} \
+$${texta_DEFINES} \
 
 ########################################################################
 # libxde OBJECTIVE_HEADERS
@@ -154,6 +154,7 @@ $${XDE_SRC}/clib/cbase/cavltree.cxx \
 $${XDE_SRC}/clib/cbase/cbinarytree.cxx \
 $${XDE_SRC}/clib/cbase/credblacktree.cxx \
 
+########################################################################
 # libxde HEADERS
 #
 libxde_HEADERS += \
@@ -170,6 +171,66 @@ $${XDE_SRC}/clib/cfs/cfilepathinterface.cxx \
 $${XDE_SRC}/clib/cfs/ctofilepathwriter.cxx \
 $${XDE_SRC}/clib/cfs/cfilepath.cxx \
 
+########################################################################
+# libxde HEADERS
+#
+libxde_HEADERS += \
+$${XDE_SRC}/clib/cxttp/chttp.h \
+$${XDE_SRC}/clib/cxttp/cxttp.h \
+$${XDE_SRC}/clib/cxttp/chttpformfield.hxx \
+$${XDE_SRC}/clib/cxttp/chttpformfieldinterface.hxx \
+$${XDE_SRC}/clib/cxttp/chttpurlencodedformfieldwriter.hxx \
+
+# libxde SOURCES
+#
+libxde_SOURCES += \
+$${XDE_SRC}/clib/cxttp/http.c \
+$${XDE_SRC}/clib/cxttp/xttp.c \
+$${XDE_SRC}/clib/cxttp/chttpformfield.cxx \
+$${XDE_SRC}/clib/cxttp/chttpformfieldinterface.cxx \
+$${XDE_SRC}/clib/cxttp/chttpurlencodedformfieldwriter.cxx \
+
+########################################################################
+# libxde HEADERS
+#
+libxde_HEADERS += \
+$${XDE_SRC}/clib/ccgi/ccgiinterface.hxx \
+$${XDE_SRC}/clib/ccgi/ccgienv.hxx \
+$${XDE_SRC}/clib/ccgi/ccgi.hxx \
+$${XDE_SRC}/clib/ccgi/ccgistream.hxx \
+$${XDE_SRC}/clib/ccgi/cfilenamecgi.hxx \
+$${XDE_SRC}/clib/ccgi/ctemplatecgi.hxx \
+$${XDE_SRC}/clib/ccgi/cdocumenttemplatecgi.hxx \
+$${XDE_SRC}/clib/ccgi/ctemplatenamelist.hxx \
+$${XDE_SRC}/clib/ccgi/cdocumentnamelist.hxx \
+
+# libxde SOURCES
+#
+libxde_SOURCES += \
+$${XDE_SRC}/clib/ccgi/ccgiinterface.cxx \
+$${XDE_SRC}/clib/ccgi/ccgienv.cxx \
+$${XDE_SRC}/clib/ccgi/ccgi.cxx \
+$${XDE_SRC}/clib/ccgi/ccgistream.cxx \
+$${XDE_SRC}/clib/ccgi/cfilenamecgi.cxx \
+$${XDE_SRC}/clib/ccgi/ctemplatecgi.cxx \
+$${XDE_SRC}/clib/ccgi/cdocumenttemplatecgi.cxx \
+$${XDE_SRC}/clib/ccgi/ctemplatenamelist.cxx \
+$${XDE_SRC}/clib/ccgi/cdocumentnamelist.cxx \
+
+########################################################################
+# libxde HEADERS
+#
+libxde_HEADERS += \
+$${XDE_SRC}/clib/ccrypto/ccryptobase.hxx \
+$${XDE_SRC}/clib/ccrypto/cuuid.hxx \
+
+# libxde SOURCES
+#
+libxde_SOURCES += \
+$${XDE_SRC}/clib/ccrypto/ccryptobase.cxx \
+$${XDE_SRC}/clib/ccrypto/cuuid.cxx \
+
+########################################################################
 # libxde HEADERS
 #
 libxde_HEADERS += \
@@ -202,6 +263,7 @@ $${XDE_SRC}/clib/ct/ctfunctionargument.cxx \
 $${XDE_SRC}/clib/ct/ctinterface.cxx \
 $${XDE_SRC}/clib/ct/ct.cxx \
 
+########################################################################
 # libxde HEADERS
 #
 libxde_HEADERS += \
@@ -220,12 +282,19 @@ $${XDE_SRC}/clib/cos/cplatform/cplatform_file.c \
 $${XDE_SRC}/clib/cos/cplatform/cplatform_string.c \
 $${XDE_SRC}/clib/cos/cdebug_printf.c \
 
+########################################################################
 # libxde HEADERS
 #
 libxde_HEADERS += \
 $${XDE_SRC}/clib/cos/cfileinterface.hxx \
 $${XDE_SRC}/clib/cos/cfile.hxx \
 $${XDE_SRC}/clib/cos/cdebug.hxx \
+$${XDE_SRC}/clib/cos/cmaininterface.hxx \
+$${XDE_SRC}/clib/cos/cmain.hxx \
+$${XDE_SRC}/clib/cos/cmainarginterface.hxx \
+$${XDE_SRC}/clib/cos/cmainarg.hxx \
+$${XDE_SRC}/clib/cos/cargmain.hxx \
+
 
 # libxde SOURCES
 #
@@ -233,8 +302,10 @@ libxde_SOURCES += \
 $${XDE_SRC}/clib/cos/cfileinterface.cxx \
 $${XDE_SRC}/clib/cos/cfile.cxx \
 $${XDE_SRC}/clib/cos/cdebug.cxx \
+$${XDE_SRC}/clib/cos/cdeviceinterface.cxx \
+$${XDE_SRC}/clib/cos/cmain.cxx \
+$${XDE_SRC}/clib/cos/cmainarginterface.cxx \
+$${XDE_SRC}/clib/cos/cmainarg.cxx \
+$${XDE_SRC}/clib/cos/cargmain.cxx \
 
 ########################################################################
-
-
-

@@ -89,9 +89,9 @@ $${NADIR_SRC}/xos/console/main_main.cpp \
 # textacgi FRAMEWORKS
 #
 textacgi_FRAMEWORKS += \
-$${texta_xde_FRAMEWORKS} \
+$${texta_FRAMEWORKS} \
 
 # textacgi LIBS
 #
 textacgi_LIBS += \
-$${texta_xde_LIBS} \
+$${texta_LIBS} \
